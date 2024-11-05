@@ -9,16 +9,19 @@ generateList = function () {
             .get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((res) => {
                 emails.push(res.data.response)
-                const newLi = document.createElement("li")
-                newLi.innerText = `${res.data.response}`
-                container.append(newLi)
+                container.innerHTML += `<li>${res.data.response}</li>`
             })
             .catch((err) => {
                 console.log('Errore')
             })
     }
+    console.log(emails)
 }
 
 generateList();
 
-console.log(emails)
+btn.addEventListener("click", function () {
+    container.innerHTML = '';
+    emails = []
+    generateList()
+})
