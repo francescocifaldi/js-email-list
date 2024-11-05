@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    width: 100%
+}
+
+h1 {
+    text-align: center;
+}
+
+li {
+    padding: 1em;
+    border: 1px solid blue;
+    border-radius: 9999px;
+    margin-top: 10px;
+}

@@ -9,7 +9,7 @@ generateList = function () {
             .get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((res) => {
                 emails.push(res.data.response)
-                container.innerHTML += `<li>${res.data.response}</li>`
+                container.innerHTML += `<li class="form-control">${res.data.response}</li>`
             })
             .catch((err) => {
                 console.log('Errore')
